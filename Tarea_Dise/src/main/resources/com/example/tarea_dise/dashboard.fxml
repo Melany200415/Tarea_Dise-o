@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea_dise.DashboardController">
+
+    <left>
+        <VBox prefHeight="200.0" prefWidth="200.0" spacing="10" style="-fx-background-color: #94bfff;" styleClass="menu">
+
+            <children>
+
+                <Label style="-fx-text-fill:white;" styleClass="menu-titulo" text="MI TIENDA">
+                    <font>
+                        <Font size="20" />
+                    </font>
+                </Label>
+
+                <Button fx:id="btnInicio" prefHeight="38.0" prefWidth="169.0" text="Inicio" />
+
+                <Button fx:id="btnProductos" onAction="#abrirProductos" prefHeight="38.0" prefWidth="166.0" text="Productos" />
+
+                <Button fx:id="btnCategorias" prefHeight="38.0" prefWidth="167.0" text="Categorías" />
+
+                <Button fx:id="btnClientes" prefHeight="38.0" prefWidth="168.0" text="Clientes" />
+
+                <Button fx:id="btnVentas" prefHeight="38.0" prefWidth="169.0" text="Ventas" />
+
+                <Button fx:id="btnReportes" prefHeight="38.0" prefWidth="169.0" text="Reportes" />
+
+                <Button fx:id="btnUsuarios" prefHeight="38.0" prefWidth="169.0" text="Usuarios" />
+
+                <Button fx:id="btnCerrarSesion" onAction="#cerrarSesion" prefHeight="35.0" prefWidth="170.0" styleClass="salir" text="Cerrar Sesión" />
+
+            </children>
+
+        </VBox>
+    </left>
+
+    <center>
+        <AnchorPane fx:id="contenedorPrincipal" prefHeight="486.0" prefWidth="643.0">
+            <children>
+                <Label contentDisplay="TOP" layoutX="400.0" layoutY="300.0" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Label>
+            <Label layoutX="136.0" layoutY="113.0" prefHeight="213.0" prefWidth="507.0" text="Bienvenido al Sistema Mi Tienda" />
+            </children>
+        </AnchorPane>
+    </center>
+
+</BorderPane>

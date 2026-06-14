@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="359.0" prefWidth="389.0" style="-fx-background-color:             linear-gradient(to bottom right,#D6EAF8,#85C1E9);             ;" styleClass="card" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea_dise.LoginController">
+
+   <children>
+      <Label layoutX="24.0" layoutY="21.0" prefHeight="26.0" prefWidth="247.0" styleClass="login-titulo" text="MI TIENDA">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <TextField fx:id="txtUsuario" layoutX="80.0" layoutY="96.0" prefHeight="40.0" prefWidth="234.0" promptText="Ingrese usuario" styleClass="login-campo" />
+      <Label layoutX="131.0" layoutY="64.0" prefHeight="16.0" prefWidth="128.0" styleClass="login-label" text="USUARIO" textAlignment="CENTER" textFill="#4d2ae8">
+         <font>
+            <Font size="8.0" />
+         </font></Label>
+      <Label layoutX="121.0" layoutY="150.0" styleClass="login-label" text="CONTRASEÑA" />
+      <PasswordField fx:id="txtPassword" layoutX="80.0" layoutY="182.0" prefHeight="40.0" prefWidth="234.0" promptText="Ingrese su contraseña" styleClass="login-campo" />
+      <ComboBox fx:id="cmbRol" layoutX="89.0" layoutY="242.0" maxHeight="45.0" maxWidth="204.0" minHeight="26.0" prefHeight="45.0" prefWidth="204.0" styleClass="login-combo" />
+      <Button fx:id="btnIngresar" layoutX="126.0" layoutY="307.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="38.0" prefWidth="119.0" styleClass="login-boton" text="Ingresar" />
+   </children>
+</AnchorPane>

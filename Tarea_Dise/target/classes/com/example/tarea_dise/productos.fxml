@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea_dise.ProductoController">
+   <top>
+      <Label styleClass="productos-titulo" text="Gestión de Productos" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" styleClass="card" BorderPane.alignment="CENTER">
+
+          <children>
+            <GridPane hgap="10.0" prefHeight="333.0" prefWidth="543.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="productos-label" text="Código Producto" />
+                  <TextField fx:id="txtCodigo" promptText="Codigo" styleClass="productos-campo" GridPane.columnIndex="1" />
+                  <Label styleClass="productos-label" text="Nombre Producto" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtNombre" promptText="Nombre del Producto" styleClass="productos-campo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label styleClass="productos-label" text="Categoria" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbCategoria" prefHeight="28.0" prefWidth="156.0" styleClass="productos-campo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label styleClass="productos-label" text="Precio" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtPrecio" promptText="Precio" styleClass="productos-campo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label styleClass="productos-label" text="Stock" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtStock" promptText="Stock" styleClass="productos-campo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label styleClass="productos-label" text="Estado" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="cmbEstado" prefHeight="31.0" prefWidth="156.0" styleClass="productos-campo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+             <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" styleClass="productos-nuevo" text="Nuevo" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" styleClass="productos-guardar" text="Guardar" />
+                  <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizar" styleClass="productos-actualizar" text="Actualizar" />
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" styleClass="productos-eliminar" text="Eliminar" />
+                  <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#limpiar" styleClass="productos-limpiar" text="Limpiar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+       <TableView
+               fx:id="tblProductos"
+               styleClass="productos-tabla"
+               prefHeight="130.0"
+               prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="74.0"  text="Código" />
+          <TableColumn fx:id="colNombre" minWidth="3.0" prefWidth="104.0"  text="Nombre" />
+            <TableColumn fx:id="colCategoria" minWidth="3.0" prefWidth="94.0" text="Categoría" />
+            <TableColumn fx:id="colPrecio" minWidth="3.0" prefWidth="85.0" text="Precio" />
+            <TableColumn fx:id="colStock" minWidth="3.0" prefWidth="67.0"  text="Stock" />
+            <TableColumn fx:id="colEstado" minWidth="0.0" prefWidth="170.0"  text="Estado" />
+        </columns>
+      </TableView>
+   </bottom>
+</BorderPane>
