@@ -14,7 +14,7 @@ El sistema cuenta con una interfaz gráfica moderna desarrollada con JavaFX y pe
 
 Agregar una captura de pantalla del dashboard.
 
-![Dashboard](C:\Users\ASUS\Pictures\Dashboard.png)
+![Dashboard](Captura/Dashboard.png)
 
 ---
 
